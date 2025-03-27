@@ -8,14 +8,6 @@ class MeterReading:
         self.date = date
         self.value = value
 
-
-'''
-1) MeterReading.__new__() -> self
-2) MeterReading.__init__(self)
-
-Summary: a = MeterReading.__init__(MeterReading.__new__())
-'''
-
 class WaterMeterReading(MeterReading):
     def __init__(self, resource_type: str, date: datetime, value: float, flow_rate: float, total_volume: float):
         super().__init__(resource_type, date, value)
